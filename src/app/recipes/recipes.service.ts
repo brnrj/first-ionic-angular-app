@@ -35,4 +35,8 @@ export class RecipesService {
   deleteRecipe(recipeId: string) {
     this.recipes = this.recipes.filter((e) => e.id !== recipeId);
   }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes = [...this.recipes, recipe];
+  }
 }
