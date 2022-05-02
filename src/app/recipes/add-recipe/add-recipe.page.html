@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>add-recipe</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>New Recipe</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" class="ion-no-padding">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input type="text" ngModel name="title" required [value]="recipe.title"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Image</ion-label>
+            <ion-input type="text" ngModel name="img" required [value]="recipe.img"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Ingredients</ion-label>
+            <ion-input type="text" ngModel name="ingredients" required></ion-input>
+          </ion-item>
+          <ion-button type="submit" expand="block" color="primary">Add Recipe</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
