@@ -29,9 +29,6 @@ export class AddRecipePage implements OnInit {
     return ingredients.split(',');
   }
 
-  addNewRecipe() {
-    console.log(this.recipe);
-  }
   onSubmit(form: NgForm) {
     if (!form.value.title || !form.value.img || !form.value.ingredients) {
       this.alertCtrl
